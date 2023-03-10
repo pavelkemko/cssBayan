@@ -6,13 +6,17 @@ html {
   box-sizing: inherit;
 }
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
   font-family: 'Rampart One';
   font-style: normal;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   font-weight: normal;
   color: black;
-  background-color: rgba(52, 55, 56, 0.459)
+  background-color: rgba(214, 226, 230, 0.459);
 }
 h1 {
   font-size: 3rem;
@@ -20,4 +24,17 @@ h1 {
 .container {
   margin: 0 auto;
   max-width: 80%;
+}
+.footer_list {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer_link {
+  list-style-type:none;
+  text-decoration: none;
+  color: black;
 }
