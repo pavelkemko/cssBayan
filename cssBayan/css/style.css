@@ -8,22 +8,99 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   min-height: 100vh;
-  font-family: 'Rampart One';
+  font-family: 'Lobster';
   font-style: normal;
   font-size: 1.5rem;
   line-height: 1.5;
   font-weight: normal;
-  color: black;
-  background-color: rgba(214, 226, 230, 0.459);
+  color: white;
+  background-color: black;
+}
+main {
+  flex: 1 0 auto;
+  margin: 5rem 0;
 }
 h1 {
   font-size: 3rem;
 }
 .container {
-  margin: 0 auto;
-  max-width: 80%;
+  margin: 0 5rem;
+}
+/*end of the main styles*/
+.bayan {
+  margin: auto;
+}
+.bayan_item {
+  border-top: 0.1rem solid white;
+}
+.bayan_header {
+  display: block;
+  cursor: pointer;
+  font-size: 2rem;
+}
+.bayan_input {
+  appearance: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.bayan_meme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100;
+  max-height: 100;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  transform: scale(0);
+}
+.meme_image {
+  max-width: 100%;
+  max-height: 100%;
+}
+.bayan_input:hover + .bayan_meme{
+  overflow: visible;
+  width: initial;
+  height: initial;
+  transform: scale(1);
+  transition: all 1s ease-in-out;
+  padding: 2rem 0;
+}
+.bayan_input:checked + .bayan_meme{
+  overflow: visible;
+  width: initial;
+  height: initial;
+  transform: scale(1);
+  padding: 2rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*styles for footer*/
+footer {
+  flex-shrink: 0;
 }
 .footer_list {
   display: flex;
@@ -36,5 +113,9 @@ h1 {
 .footer_link {
   list-style-type:none;
   text-decoration: none;
-  color: black;
+  color: white;
+  transition: 1s;
+}
+.rss_logo {
+  max-width: 100%;
 }
