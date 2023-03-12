@@ -38,6 +38,8 @@ h1 {
   display: block;
   cursor: pointer;
   font-size: 2rem;
+  width: 100%;
+  color: yellow;
 }
 .bayan_input {
   appearance: none;
@@ -60,7 +62,7 @@ h1 {
   max-width: 100%;
   max-height: 100%;
 }
-.bayan_input:hover + .bayan_meme{
+.bayan_input:hover ~ .bayan_header > .bayan_meme{
   overflow: visible;
   width: initial;
   height: initial;
@@ -68,18 +70,51 @@ h1 {
   transition: all 1s ease-in-out;
   padding: 2rem 0;
 }
-.bayan_input:checked + .bayan_meme{
+.bayan_input:checked ~ .bayan_header > .bayan_meme{
   overflow: visible;
   width: initial;
   height: initial;
   transform: scale(1);
   padding: 2rem 0;
 }
-
-
-
-
-
+.cross_icon {
+  display: none;
+  height: 2rem;
+  width: 2rem;
+  transform: rotate(45deg);
+}
+.input_header_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.bayan_input:hover ~ .bayan_header > .input_header_container > .cross_icon{
+  transform: rotate(180deg);
+  transition: 1s;
+}
+.bayan_input:checked ~ .bayan_header > .input_header_container > .cross_icon{
+  transform: rotate(180deg);
+  transition: 1s;
+}
+.bayan_input:hover ~ .bayan_header{
+  color: white;
+  transition: 1s;
+}
+.bayan_input:checked ~ .bayan_header{
+  color: white;
+  transition: 1s;
+}
+.bayan:hover {
+  cursor: pointer;
+}
+.bayan:hover > .bayan_item > .bayan_header > .input_header_container > .cross_icon {
+  display: block;
+}
+.bayan:hover p {
+  color: white;
+  transition: 1s;
+}
 
 
 
